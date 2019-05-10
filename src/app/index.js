@@ -6,12 +6,10 @@ const { PORT, INTERVAL } = require('../config');
 const server = io.listen(PORT);
 
 server.on('connection', async (socket) => {
-  console.log('connection');
   const data = await getCitiesData();
   socket.emit('citiesData', data);
+  socket.on('getData', async () => {
+    const data = await getCitiesData();
+    socket.emit('citiesData', data);  
+  });
 });
-
-setInterval(async () => {
-  const data = await getCitiesData();
-  server.sockets.emit('citiesData', data);
-}, INTERVAL);
