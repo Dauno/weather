@@ -1,8 +1,7 @@
 const io = require('socket.io');
-const { PORT, INTERVAL } = require('../config');
-const { getCitiesData } = require('../modules/weather');
-
 require('dotenv').config();
+const { getCitiesData } = require('../modules/weather');
+const { PORT, INTERVAL } = require('../config');
 
 const server = io.listen(PORT);
 

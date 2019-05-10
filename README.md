@@ -10,8 +10,8 @@ Las siguientes configuraciones deben agregarse como variables de entorno
 
 * `PORT`: Puerto donde corre la API.
 * `REDIS_URL`: String de conexión redis.
-* `API_BASEURL`: Base URL de Dark Sky API.
-* `API_SECRET`: Secret key de Dark Sky API.
+* `API_BASEURL`: Base URL Dark Sky API.
+* `API_SECRET`: Secret key Dark Sky API.
 * `INTERVAL`: Milisegundos entre solicitudes a Dark Sky API.
 
 
