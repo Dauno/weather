@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/Dauno/weather#readme",
   "dependencies": {
+    "@hapi/joi": "^15.0.2",
     "axios": "^0.18.0",
     "axios-retry": "^3.1.2",
+    "dotenv": "^8.0.0",
     "ioredis": "^4.9.3",
     "moment-timezone": "^0.5.25",
     "socket.io": "^2.2.0"

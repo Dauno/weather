@@ -1,14 +1,13 @@
 const axios = require('axios');
 const endpoints = require('./endpoints');
 const axiosRetry = require('axios-retry');
-const { forecast: { url, secret } } = require('../../config');
-
+const { API_BASEURL, API_SECRET } = require('../../config');
+console.log('API_BASEURL, API_SECRET', API_BASEURL, API_SECRET);
 const defaultParams = {};
 
 const defaultConfig = {
   headers: { 'Content-Type': 'application/json' },
-  baseURL: `${url}/${secret}`,
-  timeout: 50000
+  baseURL: `${API_BASEURL}/${API_SECRET}`,
 };
 
 function ForecastClient() {

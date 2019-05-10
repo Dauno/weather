@@ -1,10 +1,9 @@
 const io = require('socket.io');
+require('dotenv').config();
 const { getCitiesData } = require('../modules/weather');
-const { socket: { port, interval } } = require('../config');
-
-const server = io.listen(port);
-
-console.log(`Servidor corriendo en http://localhost:${port}`);
+const { PORT, INTERVAL } = require('../config');
+console.log('PORT, INTERVAL', PORT, INTERVAL);
+const server = io.listen(PORT);
 
 server.on('connection', async (socket) => {
   const data = await getCitiesData();
@@ -14,4 +13,4 @@ server.on('connection', async (socket) => {
 setInterval(async () => {
   const data = await getCitiesData();
   server.sockets.emit('citiesData', data);
-}, interval);
+}, INTERVAL);
