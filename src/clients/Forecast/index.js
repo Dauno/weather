@@ -1,8 +1,8 @@
 const axios = require('axios');
 const endpoints = require('./endpoints');
-const axiosRetry = require('axios-retry');
+// const axiosRetry = require('axios-retry');
 const { API_BASEURL, API_SECRET } = require('../../config');
-console.log('API_BASEURL, API_SECRET', API_BASEURL, API_SECRET);
+
 const defaultParams = {};
 
 const defaultConfig = {
@@ -12,7 +12,7 @@ const defaultConfig = {
 
 function ForecastClient() {
   this.instance = axios.create(defaultConfig);
-  axiosRetry(this.instance, { retries: 3 });
+  // axiosRetry(this.instance, { retries: 3 });
   
   Object.keys(endpoints).forEach((endpoint) => {
     this[endpoint] = endpoints[endpoint](this.instance, defaultParams);

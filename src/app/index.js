@@ -1,11 +1,13 @@
 const io = require('socket.io');
-require('dotenv').config();
-const { getCitiesData } = require('../modules/weather');
 const { PORT, INTERVAL } = require('../config');
-console.log('PORT, INTERVAL', PORT, INTERVAL);
+const { getCitiesData } = require('../modules/weather');
+
+require('dotenv').config();
+
 const server = io.listen(PORT);
 
 server.on('connection', async (socket) => {
+  console.log('connection');
   const data = await getCitiesData();
   socket.emit('citiesData', data);
 });
