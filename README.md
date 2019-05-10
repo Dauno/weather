@@ -12,7 +12,6 @@ Las siguientes configuraciones deben agregarse como variables de entorno
 * `REDIS_URL`: String de conexión redis.
 * `API_BASEURL`: Base URL Dark Sky API.
 * `API_SECRET`: Secret key Dark Sky API.
-* `INTERVAL`: Milisegundos entre solicitudes a Dark Sky API.
 
 
 Use [dotenv](https://github.com/motdotla/dotenv) junto con un archivo `.env` para configurar el entorno.
