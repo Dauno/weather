@@ -46,7 +46,8 @@ const weather = {
       return response;
     } catch (error) {
       weather.handlerError(cityError, cities, error);
-      return weather.getCitiesData();
+      const response =  await weather.getCitiesData();
+      return response;
     }
   }
 }
