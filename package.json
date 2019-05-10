@@ -1,0 +1,26 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "Ripley labs weather",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dauno/weather.git"
+  },
+  "author": "Dauno Martínez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dauno/weather/issues"
+  },
+  "homepage": "https://github.com/Dauno/weather#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "axios-retry": "^3.1.2",
+    "ioredis": "^4.9.3",
+    "moment-timezone": "^0.5.25",
+    "socket.io": "^2.2.0"
+  }
+}
